@@ -1,0 +1,38 @@
+Rest Calls:
+
+//TEST BED
+
+1. get user list
+	/rest/testbed/userlist
+	return - {
+				[
+					{1, user1},
+					{2, user2},
+					{3, user3}
+				]
+			 }
+2. get all sensor information for a user
+	/rest/testbed/sensor/getinfo/<user_id>
+	return - {
+				[
+					{1, sensor1, status},
+					{2, sensor2, status},
+				]
+			 }
+3. set sensor information
+	/rest/testbed/sensor/setinfo/<user_id>/<sensor_id>/<status>
+	return - { status }
+	
+//UI
+
+1. user login
+	/rest/ui/login/<userId>/<password>
+	return - { {status, user_id, user_name} }
+	
+2. check alarm status
+	/rest/ui/alarm/status/<user_id>
+	return - { status, timeLeftToGoOff }
+	
+3. supress alarm
+	/rest/ui/alarm/suppress/<user_id>
+	return - { status }
