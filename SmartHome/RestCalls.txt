@@ -20,8 +20,13 @@ Rest Calls:
 				]
 			 }
 3. set sensor information
-	/rest/testbed/sensor/setinfo/<user_id>/<sensor_id>/<status>
-	return - { status }
+	/rest/testbed/sensor/setinfo/<user_id>/
+	return - {
+				[
+					{1, sensor1, status},
+					{2, sensor2, status},
+				]
+			 }
 	
 //UI
 
