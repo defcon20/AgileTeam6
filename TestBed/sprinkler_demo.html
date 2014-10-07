@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Sprinkler</title>
+<script type="text/JavaScript" src="./js/canvasjs.min.js"></script>
+</head>
+Yard Size(square feet):<input name="sp_1" class="Input_FreeStyle" id="sp_1" size="12" style="width:100px" type="text" /><br>
+Rain Recorded(inches):<input name="sp_2" class="Input_FreeStyle" id="sp_2" size="12" style="width:100px" type="text" /><br>
+<select id="day">
+<option value="0">Sunday</option>
+<option value="1">Monday</option>
+<option value="2">Tuesday</option>
+<option value="3">Wednesday</option>
+<option value="4">Thursday</option>
+<option value="5">Friday</option>
+<option value="6">Saturday</option>
+</select><br>
+<input type="button" onclick="a()">
+
+
+<script>
+var days=new Array();
+days[0]=1222;
+days[1]=1000;
+days[2]=1000;
+days[3]=1000;
+days[4]=1000;
+days[5]=1000;
+days[6]=1000;
+function a(){
+var yard_size=document.getElementById("sp_1").value;
+var rain_record=document.getElementById("sp_2").value;
+
+
+var da=document.getElementById("day").value; 
+
+var water_meter=yard_size*10-yard_size*rain_record*0.083*7.48;
+if(water_meter<0)
+{ water_meter=0
+}
+
+alert("water_meter = " + water_meter);   
+
+days[da]=water_meter;
+
+var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Water meter"    
+      },
+      axisY: {
+        title: " "
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        showInLegend: true, 
+        legendMarkerColor: "grey",
+        legendText: "Water consumption in one week (gallons)",
+        dataPoints: [      
+        {y: days[0], label: "Sunday"},
+        {y: days[1],  label: "Monday" },
+        {y: days[2],  label: "Tuesday"},
+        {y: days[3],  label: "Wednesday"},
+        {y: days[4],  label: "Thursday"},
+        {y: days[5], label: "Friday"},
+        {y: days[6],  label: "Saturday"}                
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+
+
+
+}
+</script>
+<div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+
+</html>
