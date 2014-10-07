@@ -12,7 +12,7 @@ Rest Calls:
 				]
 			 }
 2. get all sensor information for a user
-	/rest/testbed/sensor/getinfo/<user_id>
+	/rest/testbed/sensor/getinfo/userid={user_id}
 	return - {
 				[
 					{1, sensor1, status},
@@ -20,7 +20,7 @@ Rest Calls:
 				]
 			 }
 3. set sensor information
-	/rest/testbed/sensor/setinfo/<user_id>/
+	/rest/testbed/sensor/setinfo/userid={user_id}
 	return - {
 				[
 					{1, sensor1, status},
@@ -31,13 +31,13 @@ Rest Calls:
 //UI
 
 1. user login
-	/rest/ui/login/<userId>/<password>
+	/rest/ui/login/uid={userID}&&pwd={password}
 	return - { {status, user_id, user_name} }
 	
 2. check alarm status
-	/rest/ui/alarm/status/<user_id>
+	/rest/ui/alarm/status/{user_id}
 	return - { status, timeLeftToGoOff }
 	
 3. supress alarm
-	/rest/ui/alarm/suppress/<user_id>
+	/rest/ui/alarm/suppress/{user_id}
 	return - { status }
