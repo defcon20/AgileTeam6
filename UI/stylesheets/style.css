@@ -1,0 +1,99 @@
+@import url("http://getbootstrap.com/dist/css/bootstrap.css");
+/* line 3, ../sass/style.scss */
+.myForm, .register .backend {
+  margin: 0 auto;
+  width: 400px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* line 12, ../sass/style.scss */
+h1 h2 {
+  text-align: center;
+}
+
+/* line 18, ../sass/style.scss */
+.backend {
+  margin-top: 50px;
+}
+/* line 19, ../sass/style.scss */
+.backend ul {
+  text-align: right;
+}
+
+/* line 26, ../sass/style.scss */
+#registerButton {
+  position: relative;
+  left: 15px;
+}
+
+/* line 32, ../sass/style.scss */
+#navBack {
+  height: 65px;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+/* line 39, ../sass/style.scss */
+#navBack .logo {
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+  float: left;
+}
+/* line 46, ../sass/style.scss */
+#navBack .navbar {
+  margin-left: 300px;
+}
+/* line 51, ../sass/style.scss */
+#navBack .container {
+  width: 1080px;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+}
+
+/* line 60, ../sass/style.scss */
+.myBlock {
+  width: 100%;
+  height: 500px;
+}
+
+/* line 65, ../sass/style.scss */
+.test {
+  font-size: 12px;
+}
+
+/* line 69, ../sass/style.scss */
+.socialMedia {
+  height: 45px;
+  width: 45px;
+  border-radius: 5px;
+  background: url("../images/socialMedia.png");
+  background-size: 940px;
+}
+
+/* line 77, ../sass/style.scss */
+.facebook {
+  background-position: 770px;
+}
+
+/* line 81, ../sass/style.scss */
+.googlePlus {
+  background-position: 690px;
+}
+
+/* line 85, ../sass/style.scss */
+.pInterest {
+  background-position: 1315px;
+}
+
+/* line 89, ../sass/style.scss */
+.twitter {
+  background-position: 1155px;
+}
+
+/* line 93, ../sass/style.scss */
+.youtube {
+  background-position: 996px;
+}
