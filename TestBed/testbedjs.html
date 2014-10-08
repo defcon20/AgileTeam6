@@ -27,38 +27,70 @@ table, td {
       <p align="left">In this section you can turn on or off the various window/door sensors available within the house to see how the system reacts to it.</p>
 	  <form>
 	      Window1: 	
-			<input type="radio" name="window1" id="myRadio" value="window1 sensor is on">On
-			<input type="radio" name="window1" value="window1 sensor is off" checked>Off<br>
+			<input type="radio" name="window1" id="w1o" value="window1 sensor is on">On
+			<input type="radio" name="window1" id="w1f" value="window1 sensor is off" checked>Off<br>
 			<br>
 	  	  Window2: 	
-			<input type="radio" name="window2" value="window2 sensor is on">On
-			<input type="radio" name="window2" value="window2 sensor is off"checked>Off<br>
+			<input type="radio" name="window2" id="w2o" value="window2 sensor is on">On
+			<input type="radio" name="window2" id="w2f" value="window2 sensor is off"checked>Off<br>
 			<br>
 	  	  Window3: 	
-			<input type="radio" name="window3" value="window3 sensor is on">On
-			<input type="radio" name="window3" value="window3 sensor is off"checked>Off<br>
+			<input onclick="myFunction" type="radio" name="window3" id="w3o" value="window3 sensor is on">On
+			<input onclick="myFunction" type="radio" name="window3" id="w3f" value="window3 sensor is off"checked>Off<br>
 			<br>
 	  	  Door1: 	
-			<input type="radio" name="door1" value="door1 sensor is on">On
-			<input type="radio" name="door1" value="door1 sensor is off"checked>Off<br>
+			<input type="radio" name="door1" id="d1o" value="door1 sensor is on">On
+			<input type="radio" name="door1" id="d1f" value="door1 sensor is off"checked>Off<br>
 			<br>
 	  	  Door2: 	
-			<input type="radio" name="door2" value="door2 sensor is on">On
-			<input type="radio" name="door2" value="door2 sensor is off"checked>Off<br>
+			<input type="radio" name="door2" id="d2o" value="door2 sensor is on">On
+			<input type="radio" name="door2" id="d2f" value="door2 sensor is off"checked>Off<br>
 			<br>
 	  	  Door3: 	
-			<input type="radio" name="door3" value="door3 sensor is on">On
-			<input type="radio" name="door3" value="door3 sensor is off"checked>Off<br>
+			<input type="radio" name="door3" id="d3o" value="door3 sensor is on">On
+			<input type="radio" name="door3" id="d3f" value="door3 sensor is off"checked>Off<br>
 			<br>
-			<button onclick="myFunction()">Confirm Selection</button>
-
-		<p id="display"></p>
+			<button type="button" onclick="changeImage()">Confirm Selection</button>
+			<img id="myImage" onclick="changeImage()" src="./images/pic_bulboff.gif" width="100" height="180">
+		<p id="display1" ></p></br>
+		<p id="display2" ></p></br>
+		<p id="display3" ></p></br>
+		<p id="display4" ></p></br>
+		<p id="display5" ></p></br>
+		<p id="display6" ></p></br>
 		</form>
 		<script>
-function myFunction() {
-    var x = document.getElementById("myRadio").checked;
-	var x1 = document.getElementById("myTable");
- document.getElementById("display").innerHTML = x1;
+function changeImage() {
+    var image = document.getElementById('myImage');
+	if(document.getElementById("w1o").checked)
+	{
+	document.getElementById("display1").innerHTML="window 1 is open";
+    }
+	if(document.getElementById("w2o").checked)
+	{
+	document.getElementById("display2").innerHTML="window 2 is open";
+    }
+	if(document.getElementById("w3o").checked)
+	{
+	document.getElementById("display3").innerHTML="window 3 is open";
+    }
+	if(document.getElementById("d1o").checked)
+	{
+	document.getElementById("display4").innerHTML="door 1 is open";
+    }
+	if(document.getElementById("d2o").checked)
+	{
+	document.getElementById("display5").innerHTML="door 2 is open";
+    }
+	if(document.getElementById("d3o").checked)
+	{
+	document.getElementById("display6").innerHTML="door 3 is open";
+    }
+	if (image.src.match("bulbon")) {
+        image.src = "./images/pic_bulboff.gif";
+    } else {
+        image.src = "./images/pic_bulbon.gif";
+    }
 }
 </script>
     </div>
