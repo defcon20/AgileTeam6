@@ -54,6 +54,8 @@ create table device_allocation
 	device_allocation_id int(3) NOT NULL AUTO_INCREMENT,
 	device_id int(3) references device(id),
 	location_id int (3) references location(id),
+	device_name varchar(50),
+	device_description varchar(50),
 	default_value varchar(50),
 	current_value varchar(50),
 	expected_value varchar(50),

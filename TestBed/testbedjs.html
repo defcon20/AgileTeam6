@@ -52,12 +52,12 @@ table, td {
 			<br>
 			<button type="button" onclick="changeImage()">Confirm Selection</button>
 			<img id="myImage" onclick="changeImage()" src="./images/pic_bulboff.gif" width="100" height="180">
-		<p id="display1" ></p></br>
-		<p id="display2" ></p></br>
-		<p id="display3" ></p></br>
-		<p id="display4" ></p></br>
-		<p id="display5" ></p></br>
-		<p id="display6" ></p></br>
+		<p id="display1" ></p>
+		<p id="display2" ></p>
+		<p id="display3" ></p>
+		<p id="display4" ></p>
+		<p id="display5" ></p>
+		<p id="display6" ></p>
 		</form>
 		<script>
 function changeImage() {
@@ -99,8 +99,13 @@ function changeImage() {
       <p align="left">Considering that on a normal day with no rain the sprinkler uses 10 gallons/square feet provide the following details to check how much water the sprinkler uses.</p>
     <form>
   Yard Size(square feet): <input type="text" name="yard"><br>
+  <p id="date"></p>
   Rain Recorded(inches): <input type="text" name="rain"><br>
   <input type="submit" value="Submit">
+  
+<script>
+document.getElementById("date").innerHTML = Date();
+</script>
 </form>
 	</div>          
     <div>
